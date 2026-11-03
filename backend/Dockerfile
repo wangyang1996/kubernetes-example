@@ -4,7 +4,17 @@ FROM python:3.8-slim-buster
 
 #RUN sed -i 's#http://deb.debian.org#http://mirrors.aliyun.com/#g' /etc/apt/sources.list && apt-get clean
 
-RUN apt-get update && apt-get install -y libpq-dev gcc vim apache2-utils && rm -rf /var/lib/apt/lists/*
+#RUN apt-get update && apt-get install -y libpq-dev gcc vim apache2-utils && rm -rf /var/lib/apt/lists/*
+
+RUN sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list \
+    && sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list \
+    && apt-get update --fix-missing \
+    && apt-get install -y --no-install-recommends \
+        libpq-dev \
+        gcc \
+        vim \
+        apache2-utils \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
