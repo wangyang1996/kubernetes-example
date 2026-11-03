@@ -2,8 +2,9 @@
 
 FROM python:3.8-slim-buster
 
-RUN sed -i 's#http://deb.debian.org#https://mirrors.ustc.edu.cn/debian#g' /etc/apt/sources.list \
-    && sed -i 's#http://security.debian.org#https://mirrors.ustc.edu.cn/debian-security#g' /etc/apt/sources.list \
+RUN echo "deb http://mirrors.ustc.edu.cn/debian buster main contrib non-free" > /etc/apt/sources.list \
+    && echo "deb http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free" >> /etc/apt/sources.list \
+    && echo "deb http://mirrors.ustc.edu.cn/debian-security buster/updates main contrib non-free" >> /etc/apt/sources.list \
     && apt-get update --fix-missing \
     && apt-get install -y --no-install-recommends \
         libpq-dev \
