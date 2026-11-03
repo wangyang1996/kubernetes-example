@@ -2,9 +2,6 @@
 
 FROM python:3.8-slim-buster
 
-#RUN sed -i 's#http://deb.debian.org#http://mirrors.aliyun.com/#g' /etc/apt/sources.list && apt-get clean
-
-#RUN apt-get update && apt-get install -y libpq-dev gcc vim apache2-utils && rm -rf /var/lib/apt/lists/*
 RUN sed -i 's#http://deb.debian.org#https://mirrors.ustc.edu.cn/debian#g' /etc/apt/sources.list \
     && sed -i 's#http://security.debian.org#https://mirrors.ustc.edu.cn/debian-security#g' /etc/apt/sources.list \
     && apt-get update --fix-missing \
