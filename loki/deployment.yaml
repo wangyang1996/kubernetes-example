@@ -17,7 +17,7 @@ spec:
       containers:
         - name: go-backend
           image: lyzhang1999/log-example:latest
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           resources:
             requests:
               memory: "128Mi"
