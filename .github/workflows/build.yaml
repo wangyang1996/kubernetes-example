@@ -47,6 +47,7 @@ jobs:
           commitChange: true
           branch: main
           message: 'Update Image Version to ${{ steps.vars.outputs.sha_short }}'
+          token: ${{ secrets.GH_PAT }}
           changes: |
             {
               "backend.tag": "${{ steps.vars.outputs.sha_short }}",
