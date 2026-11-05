@@ -1,11 +1,11 @@
 frontend:
   image: lyzhang1999/frontend
-  tag: b9193a0
+  tag: 1a6f84a
   autoscaling:
     averageUtilization: 90
 backend:
   image: lyzhang1999/backend
-  tag: b9193a0
+  tag: 1a6f84a
   autoscaling:
     averageUtilization: 90
 database:
