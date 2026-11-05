@@ -1,11 +1,11 @@
 frontend:
-  image: wangyang19961005/frontend
-  tag: 8fbea21
+  image: lyzhang1999/frontend
+  tag: 362f940
   autoscaling:
     averageUtilization: 90
 backend:
-  image: wangyang19961005/backend
-  tag: 8fbea21
+  image: lyzhang1999/backend
+  tag: 362f940
   autoscaling:
     averageUtilization: 90
 database:
