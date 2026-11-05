@@ -15,7 +15,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://"+ db_username +":"+ db_pa
     db_uri+"/postgres"
 
 db = SQLAlchemy(app)
-db.init_app(app)
+# db.init_app(app)
 
 
 class Text(db.Model):
