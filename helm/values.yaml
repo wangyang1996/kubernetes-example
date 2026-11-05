@@ -1,11 +1,11 @@
 frontend:
   image: lyzhang1999/frontend
-  tag: 675cfb4
+  tag: '8232479'
   autoscaling:
     averageUtilization: 90
 backend:
   image: lyzhang1999/backend
-  tag: 675cfb4
+  tag: '8232479'
   autoscaling:
     averageUtilization: 90
 database:
