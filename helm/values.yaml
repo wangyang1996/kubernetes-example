@@ -1,10 +1,10 @@
 frontend:
-  image: lyzhang1999/frontend
+  image: wangyang19961005/frontend
   tag: b5cb2e1
   autoscaling:
     averageUtilization: 90
 backend:
-  image: lyzhang1999/backend
+  image: wangyang19961005/backend
   tag: b5cb2e1
   autoscaling:
     averageUtilization: 90
