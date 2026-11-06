@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Hello wangyang2026! I'm from {process.env.REACT_APP_NAMESPACES} namespaces!
+        Hello world!!! I'm from {process.env.REACT_APP_NAMESPACES} namespaces!
       </header>
       <div className="Grid">
         <div className="Grid-Item">
