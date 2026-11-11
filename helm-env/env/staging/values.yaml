@@ -1,3 +1,0 @@
-frontend:
-  image: wangyang19961005/frontend
-  tag: latest-env
